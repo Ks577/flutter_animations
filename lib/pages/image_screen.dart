@@ -9,28 +9,28 @@ class ImageScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body:
-        InkWell(
-            onTap: () { Navigator.push(
-                context,
-                PageRouteBuilder(
-                  transitionDuration: Duration(seconds: 3) ,
-                  pageBuilder: (_, __, ___) => DetailsScreen(wonders),
-                ));//BoxDecoration
+        body: InkWell(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  PageRouteBuilder(
+                    transitionDuration: Duration(seconds: 3),
+                    pageBuilder: (_, __, ___) => DetailsScreen(wonders),
+                  )); //BoxDecoration
             }, //Container
-    child: Hero(tag: 'hero',
-            transitionOnUserGestures: false,
-            child: Transform.scale(
-    scale: 3.0,
-            child:
-        Center(
-            child: Container(
-              height: 270,
-                width: 330,
-                decoration: BoxDecoration(
-                    image: DecorationImage(image: Image
-                        .network(wonders.imageUrl)
-                        .image, fit: BoxFit.cover),
-                )))))));
-
-  }}
+            child: Hero(
+                tag: 'hero',
+                transitionOnUserGestures: true,
+                child: Transform.scale(
+                    scale: 3.0,
+                    child: Center(
+                        child: Container(
+                            height: 270,
+                            width: 330,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: Image.network(wonders.imageUrl).image,
+                                  fit: BoxFit.cover),
+                            )))))));
+  }
+}
