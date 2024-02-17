@@ -33,20 +33,22 @@ class _SplashScreenState extends State<SplashScreen>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [
-          Container(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage("assets/images/background.jpeg"),
-                  fit: BoxFit.cover),
+    return SafeArea(
+      child: Scaffold(
+        body: Stack(
+          children: [
+            Container(
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage("assets/images/background.jpeg"),
+                    fit: BoxFit.cover),
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(right: 30, left: 30),
-            child: Center(
+            Container(
+              padding: const EdgeInsets.only(left: 10),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   AnimatedBuilder(
                     animation: _controller,
@@ -58,8 +60,8 @@ class _SplashScreenState extends State<SplashScreen>
                     },
                     child: Image.asset(
                       'assets/images/cycle.png',
-                      width: 320,
-                      height: 390,
+                      width: 300,
+                      height: 290,
                     ),
                   ),
                   AnimatedTextKit(
@@ -74,36 +76,39 @@ class _SplashScreenState extends State<SplashScreen>
                 ],
               ),
             ),
-          ),
-          Align(
-            alignment: Alignment.bottomRight,
-            child: InkWell(
-              onTap: () => Navigator.push(
-                context,
-                PageTransition(
-                  type: PageTransitionType.leftToRight,
-                  duration: const Duration(seconds: 1),
-                  child: const ListScreen(),
-                ),
-              ),
-              child: AvatarGlow(
-                //  endRadius: 60.0,
-                child: Material(
-                  elevation: 8.0,
-                  shape: const CircleBorder(),
-                  child: CircleAvatar(
-                    backgroundColor: Colors.grey[100],
-                    radius: 30.0,
-                    child: Image.asset(
-                      'assets/images/next.png',
-                      height: 50,
+            Padding(
+              padding: const EdgeInsets.only(right: 10, bottom: 15),
+              child: Align(
+                alignment: Alignment.bottomRight,
+                child: InkWell(
+                  onTap: () => Navigator.push(
+                    context,
+                    PageTransition(
+                      type: PageTransitionType.leftToRight,
+                      duration: const Duration(seconds: 1),
+                      child: const ListScreen(),
+                    ),
+                  ),
+                  child: AvatarGlow(
+                    //  endRadius: 60.0,
+                    child: Material(
+                      elevation: 8.0,
+                      shape: const CircleBorder(),
+                      child: CircleAvatar(
+                        backgroundColor: Colors.grey[100],
+                        radius: 30.0,
+                        child: Image.asset(
+                          'assets/images/next.png',
+                          height: 50,
+                        ),
+                      ),
                     ),
                   ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

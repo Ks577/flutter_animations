@@ -22,10 +22,10 @@ List<Wonders> allItems = [
           'Baikal lies in a deep structural hollow surrounded by mountains, some of which rise more than 6,600 feet (2,000 metres) above the lake’s surface.'
           'Lake Baikal is home to more than 2,000 species of plants and animals, two-thirds of which can be found nowhere else in the world, including the Baikal omul fish and Baikal oil fish as well as the nerpa.',
       imageUrl:
-          'https://funart.pro/uploads/posts/2021-04/1617373438_42-p-oboi-baikal-zimoi-43.jpg',
+          'https://www.ixbt.com/img/n1/news/2019/8/3/apps.59871.13844868329507759.07372d86-a484-4a8f-a924-abf609635a3e_large.jpeg',
       show: false),
   Wonders(
-      title: '"Lake Retba(Pink lake)"',
+      title: '"Lake Retba"',
       subtitle:
           '• Country: Africa, Senegal, \n• Feature: the pink colour is due to Dunaliella Salina algae, which are found in abundance in this lake',
       description:
@@ -34,7 +34,7 @@ List<Wonders> allItems = [
           'https://planetofhotels.com/guide/sites/default/files/styles/big_gallery_image/public/text_gallery/Senegal-3.jpg',
       show: false),
   Wonders(
-      title: '"Zhangye Danxia Geological Park"',
+      title: '"Zhangye Danxia"',
       subtitle:
           '• Country:  China, Gansu Province, \n• Future:  The colorful landscapes were created by sandstone and minerals.',
       description:
@@ -42,7 +42,7 @@ List<Wonders> allItems = [
       imageUrl: 'https://wallpapercave.com/wp/wp4190627.jpg',
       show: false),
   Wonders(
-      title: '"Grand Canyon National Park"',
+      title: '"Grand Canyon"',
       subtitle:
           '• Country: Arizona and Nevada, \n• Theodore Roosevelt declared the Grand Canyon a National Monument in 1908.',
       description:

@@ -83,13 +83,16 @@ class _ListScreenState extends State<ListScreen>
                               fontSize: 15),
                         ),
                         children: [
-                          Text(
-                            wonder.subtitle,
-                            style: const TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Kurale',
-                                height: 1.5),
+                          Padding(
+                            padding: const EdgeInsets.all(10),
+                            child: Text(
+                              wonder.subtitle,
+                              style: const TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Kurale',
+                                  height: 1.5),
+                            ),
                           ),
                           const SizedBox(height: 15),
                         ],
